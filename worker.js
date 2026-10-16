@@ -24,7 +24,7 @@ export default {
     const allowed = String(env.ALLOWED_ORIGINS || '*').split(',').map((s) => (s.trim() === '*' ? '*' : norm(s))).filter(Boolean);
     const originOk = allowed.includes('*') || allowed.includes(origin.toLowerCase());
     const cors = {
-      'Access-Control-Allow-Origin': allowed.includes('*') ? '*' : (originOk ? origin : allowed[0] || ''),
+      'Access-Control-Allow-Origin': allowed.includes('*') ? '*' : (origin || allowed[0] || '*'),
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
       'Access-Control-Max-Age': '86400',
