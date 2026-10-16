@@ -3,6 +3,6 @@
   "main": "worker.js",
   "compatibility_date": "2025-01-01",
   "vars": {
-    "ALLOWED_ORIGINS": "https://claim-check-mbv09imh3-darkplayz98s-projects.vercel.app"
+    "ALLOWED_ORIGINS": "https://claim-check-one.vercel.app"
   }
 }
